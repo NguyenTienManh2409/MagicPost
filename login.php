@@ -35,7 +35,7 @@
 		else{
 			$wrongusername='
 			<div class="alert alert-danger alert-dismissible fade show" role="alert">
-				<strong>Oh Snapp!🙃</strong> Alert <b class="alert-link">UserName: </b> You entered a wrong UserName.
+				<strong>Oh Snapp!</strong> Alert <b class="alert-link">UserName: </b> You entered a wrong UserName.
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -48,11 +48,8 @@
 		<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-		<meta name="description" content="Smarthr - Bootstrap Admin Template">
-		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
-		<meta name="author" content="Dreamguys - Bootstrap Admin Template">
 		<meta name="robots" content="noindex, nofollow">
-		<title>Login - HRMS admin</title>
+		<title>Login</title>
 		
 		<!-- Favicon -->
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
