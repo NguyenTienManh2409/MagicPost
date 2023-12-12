@@ -26,16 +26,16 @@
 							<li class="submenu">
 								<a href="#" ><i class="la la-user"></i> <span> Cơ sở</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="employees.php">Điểm giao dịch</a></li>
-									<li><a href="departments.php">Điểm tập kết</a></li>
+									<li><a href="transactionPoint.php">Điểm giao dịch</a></li>
+									<li><a href="gatheringPoint.php">Điểm tập kết</a></li>
 								</ul>
 							</li>
 
 							<li class="menu-title"> 
 								<span>Quản lý tài khoản</span>
 							</li>
-							<li><a href="employees.php"><i class="la la-users"></i> <span>Điểm tập kết</span></a></li>
-							<li><a href="promotion.php"><i class="la la-users"></i> <span>Điểm giao dịch</span></a></li>
+							<li><a href="LeaderTransaction.php"><i class="la la-users"></i> <span>Điểm giao dịch</span></a></li>
+							<li><a href="LeaderGathering.php"><i class="la la-users"></i> <span>Điểm tập kết</span></a></li>
 							<li><a href="resignation.php"><i class="la la-external-link-square"></i> <span>Đăng kí tài khoản</span></a></li>
 							<li><a href="termination.php"><i class="la la-times-circle"></i> <span>Xóa tài khoản</span></a></li>
 							<li class="menu-title"> 

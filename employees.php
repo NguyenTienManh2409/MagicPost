@@ -115,7 +115,7 @@
 						<div class="col-sm-6 col-md-3">  
 							<a href="#" class="btn btn-success btn-block"> Search </a>  
 						</div>
-     </div>
+    					</div>
 					<!-- Search Filter -->
 					<!-- user profiles list starts her -->
 
