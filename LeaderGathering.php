@@ -13,7 +13,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
         <meta name="robots" content="noindex, nofollow">
-        <title>Promotion</title>
+        <title>Leader</title>
 		
 		<!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
@@ -80,17 +80,20 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="table-responsive">
-							
 								<!-- Promotion Table -->
-								<table class="table table-striped custom-table mb-0 datatable">
+								<table class="table table-striped custom-table mb-0 datatable" id="accountTable">
 									<thead>
 										<tr>
-											<th>ID</th>
-											<th>Tên</th>
-											<th>Ngày sinh</th>
-											<th>Email</th>
-											<th>Số điện thoại</th>
-											<th>Vị trí</th>
+										<th>ID</th>
+										<th>Type</th>
+										<th>Full Name</th>
+										<th>Phone Number</th>
+										<th>Address</th>
+										<th>Employee Code</th>
+										<th>User Name</th>
+										<th>Email</th>
+										<th>Password</th>
+										<th>Company Code</th>
 											<th class="text-right">Action</th>
 										</tr>
 									</thead>
@@ -123,6 +126,8 @@
         </div>
 		<!-- /Main Wrapper -->
 		
+		<!-- api -->
+		<script src="Controller/list_account_manager.js"></script>
 		<!-- jQuery -->
         <script src="assets/js/jquery-3.2.1.min.js"></script>
 		
