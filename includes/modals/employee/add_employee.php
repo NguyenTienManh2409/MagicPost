@@ -1,5 +1,3 @@
-<?php $set = '1234567890';
-$id = substr(str_shuffle($set), 0, 6); ?>
 <div id="add_employee" class="modal custom-modal fade" role="dialog">
 					<div class="modal-dialog modal-dialog-centered modal-lg">
 						<div class="modal-content">
@@ -14,14 +12,32 @@ $id = substr(str_shuffle($set), 0, 6); ?>
 									<div class="row">
 										<div class="col-sm-6">
 											<div class="form-group">
-												<label class="col-form-label">First Name <span class="text-danger">*</span></label>
-												<input name="firstname" required class="firstname" type="text">
+												<label class="col-form-label">Type <span class="text-danger">*</span></label>
+												<input name="type" required class="form-control" type="text">
 											</div>
 										</div>
 										<div class="col-sm-6">
 											<div class="form-group">
-												<label class="col-form-label">Last Name</label>
-												<input name="lastname" required class="lastname" type="text">
+												<label class="col-form-label">Full Name<span class="text-danger">*</span></label>
+												<input name="fullname" required class="form-control" type="text">
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label class="col-form-label">Phone Number</label>
+												<input name="phonenumber" required class="form-control" type="text">
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label class="col-form-label">Address</label>
+												<input name="address" required class="form-control" type="text">
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label class="col-form-label">Employee code</label>
+												<input name="employeecode" required class="form-control" type="text">
 											</div>
 										</div>
 										<div class="col-sm-6">
@@ -32,72 +48,20 @@ $id = substr(str_shuffle($set), 0, 6); ?>
 										</div>
 										<div class="col-sm-6">
 											<div class="form-group">
-												<label class="col-form-label">Email <span class="text-danger">*</span></label>
-												<input name="email" required class="form-control" type="email">
+												<label class="col-form-label">Email<span class="text-danger">*</span></label>
+												<input name="email" class="form-control" required class="form-control" type="email">
 											</div>
 										</div>
 										<div class="col-sm-6">
 											<div class="form-group">
-												<label class="col-form-label">Password</label>
-												<input class="form-control" required name="password" type="password">
-											</div>
-										</div>
-										<div class="col-sm-6">
-											<div class="form-group">
-												<label class="col-form-label">Confirm Password</label>
-												<input class="form-control" required name="confirm_pass" type="password">
+												<label class="col-form-label">Password<span class="text-danger">*</span></label>
+												<input name="password" class="form-control" required class="form-control" type="password">
 											</div>
 										</div>
 										<div class="col-sm-6">  
 											<div class="form-group">
-												<label class="col-form-label">Employee ID <span class="text-danger">*</span></label>
-												<input name="employee_id" readonly type="text" value="<?php echo 'EMP-'.$id; ?>" class="form-control">
-											</div>
-										</div>
-										
-										<div class="col-sm-6">
-											<div class="form-group">
-												<label class="col-form-label">Phone </label>
-												<input name="phone" required class="form-control" type="text">
-											</div>
-										</div>
-										
-										<div class="col-md-6">
-											<div class="form-group">
-												<label>Department <span class="text-danger">*</span></label>
-												<select required name="department" class="select">
-													<option>Select Department</option>
-													<?php 
-											$sql2 = "SELECT * from departments";
-											$query2 = $dbh -> prepare($sql2);
-											$query2->execute();
-											$result2=$query2->fetchAll(PDO::FETCH_OBJ);
-											foreach($result2 as $row)
-											{          
-												?>  
-											<option value="<?php echo htmlentities($row->Department);?>">
-											<?php echo htmlentities($row->Department);?></option>
-											<?php } ?> 
-												</select>
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="form-group">
-												<label>Designation <span class="text-danger">*</span></label>
-												<select required name="designation" class="select">
-													<option>Select Designation</option>
-													<?php 
-											$sql2 = "SELECT * from designations";
-											$query2 = $dbh -> prepare($sql2);
-											$query2->execute();
-											$result2=$query2->fetchAll(PDO::FETCH_OBJ);
-											foreach($result2 as $row)
-											{          
-												?>  
-											<option value="<?php echo htmlentities($row->Designation);?>">
-											<?php echo htmlentities($row->Designation);?></option>
-											<?php } ?> 
-												</select>
+												<label class="col-form-label">Company Code<span class="text-danger">*</span></label>
+												<input name="companycode" class="form-control">
 											</div>
 										</div>
 										<div class="col-md-12">
@@ -116,3 +80,38 @@ $id = substr(str_shuffle($set), 0, 6); ?>
 						</div>
 					</div>
 				</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('add_employee').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Collect form data
+            var formData = new FormData(this);
+
+			formData.append('employee_code', '<?php echo $id; ?>');
+
+            // Make AJAX request
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        if (response.success) {
+                            // Handle success, e.g., show a success message
+                            alert('Employee added successfully');
+                        } else {
+                            // Handle failure, e.g., show an error message
+                            alert('Error adding employee: ' + response.message);
+                        }
+                    } else {
+                        // Handle HTTP error
+                        alert('Error: ' + xhr.statusText);
+                    }
+                }
+            };
+            xhr.open('POST', 'backend/api/account/new_account.php', true);
+            xhr.send(formData);
+        });
+    });
+</script>

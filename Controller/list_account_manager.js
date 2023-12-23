@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Make an AJAX request to your PHP API
+    // Make an AJAX request to API
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {

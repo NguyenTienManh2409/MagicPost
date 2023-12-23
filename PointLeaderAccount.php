@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
 	session_start();
 	error_reporting(0);
 	include('includes/config.php');
@@ -13,7 +13,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
         <meta name="robots" content="noindex, nofollow">
-        <title>Resignation</title>
+        <title>Leader</title>
 		
 		<!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
@@ -54,7 +54,7 @@
 			<!-- /Header -->
 			
 			<!-- Sidebar -->
-            <?php include_once("includes/sidebar.php");?>
+            <?php include_once("includes/sidebar-leader.php");?>
 			<!-- /Sidebar -->
 			
 			<!-- Page Wrapper -->
@@ -67,14 +67,18 @@
 					<div class="page-header">
 						<div class="row align-items-center">
 							<div class="col">
-								<h3 class="page-title">Resignation</h3>
+								<h3 class="page-title">Trưởng điểm tập kết</h3>
 								<ul class="breadcrumb">
-									<li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-									<li class="breadcrumb-item active">Resignation</li>
 								</ul>
 							</div>
 							<div class="col-auto float-right ml-auto">
-								<a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_resignation"><i class="fa fa-plus"></i> Add Resignation</a>
+							</div>
+							<div class="col-auto float-right ml-auto">
+								<a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_employee"><i class="fa fa-plus"></i> Add Employee</a>
+								<div class="view-icons">
+									<a href="employees.php" title="Grid View" class="grid-view btn btn-link active"><i class="fa fa-th"></i></a>
+									<a href="employees-list.php" title="Tabular View" class="list-view btn btn-link"><i class="fa fa-bars"></i></a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -83,60 +87,45 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="table-responsive">
-								<table class="table table-striped custom-table mb-0 datatable">
+								<!-- Promotion Table -->
+								<table class="table table-striped custom-table mb-0 datatable" id="accountTable">
 									<thead>
 										<tr>
-											<th>#</th>
-											<th>Resigning Employee </th>
-											<th>Department </th>
-											<th>Reason </th>
-											<th>Notice Date </th>
-											<th>Resignation Date </th>
+										<th>ID</th>
+										<th>Type</th>
+										<th>Full Name</th>
+										<th>Phone Number</th>
+										<th>Address</th>
+										<th>Employee Code</th>
+										<th>User Name</th>
+										<th>Email</th>
+										<th>Password</th>
+										<th>Company Code</th>
 											<th class="text-right">Action</th>
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td>1</td>
-											<td>
-												<h2 class="table-avatar blue-link">
-													<a href="profile.php" class="avatar"><img alt="" src="assets/img/profiles/avatar-02.jpg"></a>
-													<a href="profile.php">John Doe</a>
-												</h2>
-											</td>
-											<td>Web Development</td>
-											<td>Lorem ipsum dollar</td>
-											<td>28 Feb 2019</td>
-											<td>28 Feb 2019</td>
-											<td class="text-right">
-												<div class="dropdown dropdown-action">
-													<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
-													<div class="dropdown-menu dropdown-menu-right">
-														<a class="dropdown-item" href="#" data-toggle="modal" data-target="#edit_resignation"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-														<a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_resignation"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-													</div>
-												</div>
-											</td>
-										</tr>
 									</tbody>
 								</table>
+								<!-- /Promotion Table -->
+								
 							</div>
 						</div>
 					</div>
                 </div>
 				<!-- /Page Content -->
-
-				<!-- Add Resignation Modal -->
-				<?php include_once("includes/modals/resignation/add.php"); ?>
-				<!-- /Add Resignation Modal -->
 				
-				<!-- Edit Resignation Modal -->
-				<?php include_once("includes/modals/resignation/edit.php"); ?>
-				<!-- /Edit Resignation Modal -->
+				<!-- Add Employee Modal -->
+				<?php include_once("includes/modals/employee/add_employee.php"); ?>
+				<!-- /Add Employee Modal -->
 				
-				<!-- Delete Resignation Modal -->
-				<?php include_once("includes/modals/resignation/delete.php"); ?>
-				<!-- /Delete Resignation Modal -->
+				<!-- Edit Employee Modal -->
+				<?php include_once("includes/modals/employee/edit_employee.php"); ?>
+				<!-- /Edit Employee Modal -->
+				
+				<!-- Delete Employee Modal -->
+				<?php include_once("includes/modals/employee/delete_employee.php"); ?>
+				<!-- /Delete Employee Modal -->
 			
             </div>
 			<!-- /Page Wrapper -->
@@ -144,6 +133,8 @@
         </div>
 		<!-- /Main Wrapper -->
 		
+		<!-- api -->
+		<script src="Controller/list_account_manager.js"></script>
 		<!-- jQuery -->
         <script src="assets/js/jquery-3.2.1.min.js"></script>
 		
