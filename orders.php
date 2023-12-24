@@ -13,7 +13,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
         <meta name="robots" content="noindex, nofollow">
-        <title>Teller</title>
+        <title>Order</title>
 		
 		<!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
@@ -48,7 +48,7 @@
 			<!-- /Header -->
 			
 			<!-- Sidebar -->
-            <?php include_once("includes/sidebar-Pointleader.php");?>
+            <?php include_once("includes/sidebar-leader.php");?>
 			<!-- /Sidebar -->
 			
 			<!-- Page Wrapper -->
@@ -61,14 +61,11 @@
 					<div class="page-header">
 						<div class="row align-items-center">
 							<div class="col">
-								<h3 class="page-title">Giao dịch viên</h3>
+								<h3 class="page-title">Thống kê hàng hóa</h3>
 								<ul class="breadcrumb">
 								</ul>
 							</div>
 							<div class="col-auto float-right ml-auto">
-							</div>
-							<div class="col-auto float-right ml-auto">
-								<a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_employee"><i class="fa fa-plus"></i> Add Employee</a>
 							</div>
 						</div>
 					</div>
@@ -82,15 +79,26 @@
 									<thead>
 										<tr>
 										<th>ID</th>
-										<th>Type</th>
-										<th>Full Name</th>
-										<th>Phone Number</th>
-										<th>Address</th>
-										<th>Employee Code</th>
-										<th>User Name</th>
-										<th>Email</th>
-										<th>Password</th>
-										<th>Company Code</th>
+										<th>Tên mặt hàng</th>
+										<th>Mã đơn hàng</th>
+										<th>Người gửi</th>
+										<th>Mã khách hàng</th>
+										<th>Sdt người gửi</th>
+										<th>Địa chỉ gửi</th>
+										<th>Mã bưu chính gửi</th>
+										<th>Người nhận</th>
+										<th>Sdt người nhận</th>
+										<th>Địa chỉ nhận</th>
+										<th>Mã bưu chính nhận</th>
+										<th>Loại hàng</th>
+										<th>Chỉ dẫn</th>
+                                        <th>Ghi chú</th>
+                                        <th>Cước phí</th>
+                                        <th>COD</th>
+                                        <th>Khối lượng</th>
+                                        <th>Thời gian gửi</th>
+                                        <th>Thời gian hoàn thành</th>
+                                        <th>Quản lý công ty</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -103,18 +111,6 @@
 					</div>
                 </div>
 				<!-- /Page Content -->
-				
-				<!-- Add Employee Modal -->
-				<?php include_once("includes/modals/employee/add_employee.php"); ?>
-				<!-- /Add Employee Modal -->
-				
-				<!-- Edit Employee Modal -->
-				<?php include_once("includes/modals/employee/edit_employee.php"); ?>
-				<!-- /Edit Employee Modal -->
-				
-				<!-- Delete Employee Modal -->
-				<?php include_once("includes/modals/employee/delete_employee.php"); ?>
-				<!-- /Delete Employee Modal -->
 			
             </div>
 			<!-- /Page Wrapper -->
@@ -123,7 +119,7 @@
 		<!-- /Main Wrapper -->
 		
 		<!-- api -->
-		<script src="Controller/list_account_tellers.js"></script>
+		<script src="Controller/list_order.js"></script>
 		<!-- jQuery -->
         <script src="assets/js/jquery-3.2.1.min.js"></script>
 		

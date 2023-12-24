@@ -16,9 +16,8 @@
 							<li class="menu-title"> 
 								<span>Quản lý hàng hóa</span>
 							</li>
-							<li class="submenu">
-								<a href="#" ><i class="la la-user"></i> <span> Thống kê</span></span></a>
-							</li>
+							<li><a href="orders.php"><i class="la la-users"></i> <span>Thống kê hàng hóa</span></a></li>
+
 							
 							<li class="menu-title"> 
 								<span>Quản lý hệ thống</span>

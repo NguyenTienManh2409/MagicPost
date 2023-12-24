@@ -11,7 +11,7 @@
 
     $account = new Account($connect);
     
-   $roles = array("Giao dịch viên");
+    $roles = array("Giao dịch viên");
 
     $read = $account->read_info_role($roles);
     $num = $read->rowCount(); 
