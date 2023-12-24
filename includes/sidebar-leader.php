@@ -24,7 +24,7 @@
 								<span>Quản lý hệ thống</span>
 							</li>
 							<li><a href="transactionPoint.php"><i class="la la-users"></i> <span>Điểm giao dịch</span></a></li>
-							<li><a href="gatheringPoint.php.php"><i class="la la-users"></i> <span>Điểm tập kết</span></a></li>
+							<li><a href="gatheringPoint.php"><i class="la la-users"></i> <span>Điểm tập kết</span></a></li>
 							<li class="menu-title"> 
 								<span>Quản lý tài khoản</span>
 							</li>

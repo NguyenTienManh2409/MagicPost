@@ -38,12 +38,6 @@
 		
 		<!-- Main CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
-		
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.min.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
     </head>
     <body>
 		<!-- Main Wrapper -->
@@ -67,7 +61,7 @@
 					<div class="page-header">
 						<div class="row align-items-center">
 							<div class="col">
-								<h3 class="page-title">Trưởng điểm tập kết</h3>
+								<h3 class="page-title">Tài khoản trưởng điểm</h3>
 								<ul class="breadcrumb">
 								</ul>
 							</div>
@@ -75,10 +69,6 @@
 							</div>
 							<div class="col-auto float-right ml-auto">
 								<a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_employee"><i class="fa fa-plus"></i> Add Employee</a>
-								<div class="view-icons">
-									<a href="employees.php" title="Grid View" class="grid-view btn btn-link active"><i class="fa fa-th"></i></a>
-									<a href="employees-list.php" title="Tabular View" class="list-view btn btn-link"><i class="fa fa-bars"></i></a>
-								</div>
 							</div>
 						</div>
 					</div>

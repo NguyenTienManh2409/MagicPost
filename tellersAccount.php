@@ -1,4 +1,4 @@
-﻿<?php 
+<?php 
 	session_start();
 	error_reporting(0);
 	include('includes/config.php');
@@ -13,7 +13,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
         <meta name="robots" content="noindex, nofollow">
-        <title>Promotion</title>
+        <title>Leader</title>
 		
 		<!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
@@ -38,12 +38,6 @@
 		
 		<!-- Main CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
-		
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.min.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
     </head>
     <body>
 		<!-- Main Wrapper -->
@@ -54,7 +48,7 @@
 			<!-- /Header -->
 			
 			<!-- Sidebar -->
-            <?php include_once("includes/sidebar.php");?>
+            <?php include_once("includes/sidebar-Pointleader.php");?>
 			<!-- /Sidebar -->
 			
 			<!-- Page Wrapper -->
@@ -67,14 +61,14 @@
 					<div class="page-header">
 						<div class="row align-items-center">
 							<div class="col">
-								<h3 class="page-title">Promotion</h3>
+								<h3 class="page-title">Trưởng điểm tập kết</h3>
 								<ul class="breadcrumb">
-									<li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-									<li class="breadcrumb-item active">Promotion</li>
 								</ul>
 							</div>
 							<div class="col-auto float-right ml-auto">
-								<a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_promotion"><i class="fa fa-plus"></i> Add Promotion</a>
+							</div>
+							<div class="col-auto float-right ml-auto">
+								<a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_employee"><i class="fa fa-plus"></i> Add Employee</a>
 							</div>
 						</div>
 					</div>
@@ -82,19 +76,21 @@
 					
 					<div class="row">
 						<div class="col-md-12">
-							<div class="table-responsive">
-							
+							<div >
 								<!-- Promotion Table -->
-								<table class="table table-striped custom-table mb-0 datatable">
+								<table class="table table-striped custom-table mb-0 datatable" id="accountTable">
 									<thead>
 										<tr>
-											<th>#</th>
-											<th>Promoted Employee </th>
-											<th>Department</th>
-											<th>Promotion Designation From </th>
-											<th>Promotion Designation To </th>
-											<th>Promotion Date </th>
-											<th class="text-right">Action</th>
+										<th>ID</th>
+										<th>Type</th>
+										<th>Full Name</th>
+										<th>Phone Number</th>
+										<th>Address</th>
+										<th>Employee Code</th>
+										<th>User Name</th>
+										<th>Email</th>
+										<th>Password</th>
+										<th>Company Code</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -108,17 +104,17 @@
                 </div>
 				<!-- /Page Content -->
 				
-				<!-- Add Promotion Modal -->
-				<?php include_once("includes/modals/promotion/add.php"); ?>
-				<!-- /Add Promotion Modal -->
+				<!-- Add Employee Modal -->
+				<?php include_once("includes/modals/employee/add_employee.php"); ?>
+				<!-- /Add Employee Modal -->
 				
-				<!-- Edit Promotion Modal -->
-				<?php include_once("includes/modals/promotion/edit.php"); ?>
-				<!-- /Edit Promotion Modal -->
+				<!-- Edit Employee Modal -->
+				<?php include_once("includes/modals/employee/edit_employee.php"); ?>
+				<!-- /Edit Employee Modal -->
 				
-				<!-- Delete Promotion Modal -->
-				<?php include_once("includes/modals/promotion/delete.php"); ?>
-				<!-- /Delete Promotion Modal -->
+				<!-- Delete Employee Modal -->
+				<?php include_once("includes/modals/employee/delete_employee.php"); ?>
+				<!-- /Delete Employee Modal -->
 			
             </div>
 			<!-- /Page Wrapper -->
@@ -126,15 +122,14 @@
         </div>
 		<!-- /Main Wrapper -->
 		
+		<!-- api -->
+		<script src="Controller/list_account_tellers.js"></script>
 		<!-- jQuery -->
         <script src="assets/js/jquery-3.2.1.min.js"></script>
 		
 		<!-- Bootstrap Core JS -->
         <script src="assets/js/popper.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
-		
-		<!-- Slimscroll JS -->
-		<script src="assets/js/jquery.slimscroll.min.js"></script>
 				
 		<!-- Select2 JS -->
 		<script src="assets/js/select2.min.js"></script>
