@@ -43,6 +43,19 @@
 
         }
 
+        public function list_oder_where() {
+            $query = "SELECT * FROM order_status WHERE Ma_nhan_vien=:Ma_nhan_vien";
+            $stmt = $this->conn->prepare($query);
+
+            //clean data
+            $this->Ma_nhan_vien = htmlspecialchars(strip_tags($this->Ma_nhan_vien));
+
+            //bind data
+            $stmt->bindParam(':Ma_nhan_vien',$this->Ma_nhan_vien);
+            $stmt->execute();
+            return $stmt;
+        }
+
         
         public function status_oder() {
             $query = "SELECT * FROM order_status WHERE Ma_don_hang=:Ma_don_hang";

@@ -5,6 +5,7 @@
 
         public $Id;
         public $Vai_tro;
+        public $Vai_tro_1;
         public $Ho_ten;
         public $So_dien_thoai;
         public $Dia_chi;
@@ -28,18 +29,35 @@
             return $stmt;
         }
 
-        public function read_info_role($roles) {
-            $roles = implode("', '", $roles);
-            $query = "SELECT * FROM account
-            WHERE account.Vai_tro IN ('$roles')
-            ORDER BY Id DESC";
-
+        //show list account where
+        public function list_manager() {
+            $query = "SELECT * FROM account WHERE Vai_tro=:Vai_tro OR Vai_tro=:Vai_tro_1";
             $stmt = $this->conn->prepare($query);
+
+            //clean data
+            $this->Vai_tro = htmlspecialchars(strip_tags($this->Vai_tro));
+            $this->Vai_tro_1 = htmlspecialchars(strip_tags($this->Vai_tro_1));
+
+            //bind data
+            $stmt->bindParam(':Vai_tro',$this->Vai_tro);
+            $stmt->bindParam(':Vai_tro_1',$this->Vai_tro_1);
             $stmt->execute();
             return $stmt;
         }
+        
+        //show list account where workplace
+        public function list_staff() {
+            $query = "SELECT Ma_nhan_vien FROM account WHERE Ma_don_vi=:Ma_don_vi";
+            $stmt = $this->conn->prepare($query);
 
+            //clean data
+            $this->Ma_don_vi = htmlspecialchars(strip_tags($this->Ma_don_vi));
 
+            //bind data
+            $stmt->bindParam(':Ma_don_vi',$this->Ma_don_vi);
+            $stmt->execute();
+            return $stmt;
+        }
 
         //show data
         public function show_one() {
