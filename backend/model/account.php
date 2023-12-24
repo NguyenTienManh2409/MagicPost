@@ -44,6 +44,17 @@
             $stmt->execute();
             return $stmt;
         }
+
+        public function read_info_role($roles) {
+            $roles = implode("', '", $roles);
+            $query = "SELECT * FROM account
+            WHERE account.Vai_tro IN ('$roles')
+            ORDER BY Id DESC";
+
+            $stmt = $this->conn->prepare($query);
+            $stmt->execute();
+            return $stmt;
+        }
         
         //show list account where workplace
         public function list_staff() {

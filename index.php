@@ -48,7 +48,7 @@
 			<!-- /Header -->
 			
 			<!-- Sidebar -->
-            <?php include_once("includes/sidebar-PointLeader.php");?>
+            <?php include_once("includes/sidebar-Pointleader.php");?>
 			<!-- /Sidebar -->
 			
 			<!-- Page Wrapper -->

@@ -44,8 +44,8 @@
 
                 $oder_status_item = array(
                     'id' => $Id,
-                   'oder_code' => $Ma_don_hang,
-                   'status' => $Tinh_trang,
+                    'oder_code' => $Ma_don_hang,
+                    'status' => $Tinh_trang,
                     'employee_code' => $Ma_nhan_vien,
                     'receipt_time' => $Thoi_gian_nhan,
                     'response_time' => $Thoi_gian_tra
