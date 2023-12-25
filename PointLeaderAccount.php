@@ -91,7 +91,6 @@
 										<th>Email</th>
 										<th>Password</th>
 										<th>Company Code</th>
-											<th class="text-right">Action</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -125,15 +124,13 @@
 		
 		<!-- api -->
 		<script src="Controller/list_account_manager.js"></script>
+		<script src="Controller/add_account.js"></script>
 		<!-- jQuery -->
         <script src="assets/js/jquery-3.2.1.min.js"></script>
 		
 		<!-- Bootstrap Core JS -->
         <script src="assets/js/popper.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
-		
-		<!-- Slimscroll JS -->
-		<script src="assets/js/jquery.slimscroll.min.js"></script>
 				
 		<!-- Select2 JS -->
 		<script src="assets/js/select2.min.js"></script>

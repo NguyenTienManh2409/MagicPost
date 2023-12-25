@@ -30,12 +30,6 @@
 		
 		<!-- Main CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
-		
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.min.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
     </head>
     <body>
 		<!-- Main Wrapper -->
@@ -59,7 +53,7 @@
 					<div class="page-header">
 						<div class="row align-items-center">
 							<div class="col">
-								<h3 class="page-title">Department</h3>
+								<h3 class="page-title">Tài khoản trưởng điểm</h3>
 								<ul class="breadcrumb">
 									<li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
 									<li class="breadcrumb-item active">Department</li>
@@ -85,7 +79,6 @@
 											<th>Tên trưởng điểm</th>
 											<th>Vị trí</th>
 											<th>Thời gian thành lập</th>
-											<th class="text-right">Action</th>
 										</tr>
 									</thead>
 									<tbody>
