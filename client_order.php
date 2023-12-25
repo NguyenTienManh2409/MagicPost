@@ -69,70 +69,131 @@
 								</button>
 							</div>
 							<div class="modal-body">
-								<form method="POST" >
+								<form method="POST" id="clientOrderForm">
 									<div class="row">
 										<div class="col-md-6">
 											<div class="form-group">
-												<label class="col-form-label">First Name <span class="text-danger">*</span></label>
-												<input name="firstname" required class="form-control" type="text">
+												<label class="col-form-label">Tên mặt hàng<span class="text-danger">*</span></label>
+												<input name="name_item" required class="form-control" type="text">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
-												<label class="col-form-label">Last Name</label>
-												<input name="lastname" required class="form-control" type="text">
+												<label class="col-form-label">Mã đơn hàng</label>
+												<input name="oder_code" required class="form-control" type="text">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
-												<label class="col-form-label">Username <span class="text-danger">*</span></label>
-												<input name="username" required class="form-control" type="text">
+												<label class="col-form-label">Người gửi<span class="text-danger">*</span></label>
+												<input name="sender" required class="form-control" type="text">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
-												<label class="col-form-label">Email <span class="text-danger">*</span></label>
-												<input name="email" required class="form-control floating" type="email">
+												<label class="col-form-label">Mã khách hàng<span class="text-danger">*</span></label>
+												<input name="user_code" required class="form-control" type="text">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
-												<label class="col-form-label">Password</label>
-												<input name="password" required class="form-control" type="password">
+												<label class="col-form-label">Sdt người gửi</label>
+												<input name="sender_phone" required class="form-control" type="text">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
-												<label class="col-form-label">Confirm Password</label>
-												<input name="confirmpass" required class="form-control" type="password">
+												<label class="col-form-label">Địa chỉ gửi</label>
+												<input name="sender_address" required class="form-control" type="text">
 											</div>
 										</div>
 										<div class="col-md-6">  
 											<div class="form-group">
-												<label class="col-form-label">Client ID <span class="text-danger">*</span></label>
+												<label class="col-form-label">Mã bưu chính gửi</label>
+												<input name="sender_zip_code" required class="form-control" type="text">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
-												<label class="col-form-label">Phone </label>
-												<input name="phone" required class="form-control" type="text">
+												<label class="col-form-label">Người nhận</label>
+												<input name="receiver" required class="form-control" type="text">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
-												<label class="col-form-label">Company Name</label>
-												<input name="company" required class="form-control" type="text">
+												<label class="col-form-label">Số điện thoại người nhận</label>
+												<input name="receiver_phone" required class="form-control" type="text">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
-												<label class="col-form-label">Address</label>
-												<input class="form-control" name="address" required type="text">
+												<label class="col-form-label">Địa chỉ nhận</label>
+												<input class="form-control" name="receiver_address" required type="text">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-form-label">Mã bưu chính nhận</label>
+												<input class="form-control" name="receiver_zip_code" required type="text">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-form-label">Loại hàng</label>
+												<input class="form-control" name="type" required type="text">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-form-label">Chỉ dẫn</label>
+												<input class="form-control" name="instruction" required type="text">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-form-label">Ghi chú</label>
+												<input class="form-control" name="note" required type="text">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-form-label">Cước phí</label>
+												<input class="form-control" name="rates" required type="text">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-form-label">COD</label>
+												<input class="form-control" name="COD" required type="text">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-form-label">Khối lượng</label>
+												<input class="form-control" name="mass" required type="text">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-form-label">Thời gian gửi</label>
+												<input class="form-control" name="sending_time" required type="text">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-form-label">Thời gian hoàn thành</label>
+												<input class="form-control" name="completion_time" required type="text">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="col-form-label">Quản lý công ty</label>
+												<input class="form-control" name="management" required type="text">
 											</div>
 										</div>
 									</div>
 									<div class="submit-section">
-										<button type="submit" name="add_client" class="btn btn-primary submit-btn">Submit</button>
+										<button type="submit" name="add_client_order" class="btn btn-primary submit-btn">Submit</button>
 									</div>
 								</form>
 							</div>
@@ -149,6 +210,8 @@
         </div>
 		<!-- /Main Wrapper -->
 		
+		<!-- api -->
+		<script src="Controller/add_client_order.js"></script>
 		<!-- jQuery -->
         <script src="assets/js/jquery-3.2.1.min.js"></script>
 		
