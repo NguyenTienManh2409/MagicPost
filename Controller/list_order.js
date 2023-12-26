@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (xhr.status === 200) {
                 var response = JSON.parse(xhr.responseText);
                 updateTable(response);
+                console.log("12312413");
+
             } else {
                 console.error('Error:', xhr.statusText);
             }

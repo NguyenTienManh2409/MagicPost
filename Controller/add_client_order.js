@@ -1,37 +1,48 @@
+document.getElementById("clientOrderForm").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-    document.addEventListener("DOMContentLoaded", function () {
-        // Intercept the form submission
-        document.querySelector("form").addEventListener("submit", function (event) {
-            // Prevent the default form submission
-            event.preventDefault();
+    var formData = {
+        "name_item":document.getElementById("name_item").value,
+        "oder_code":document.getElementById("oder_code").value,
+        "sender":document.getElementById("sender").value,
+        "user_code":document.getElementById("user_code").value,
+        "sender_phone":document.getElementById("sender_phone").value,
+        "sender_address":document.getElementById("sender_address").value,
+        "sender_zip_code":document.getElementById("sender_zip_code").value,
+        "receiver":document.getElementById("receiver").value,
+        "receiver_phone":document.getElementById("receiver_phone").value,
+        "receiver_address":document.getElementById("receiver_address").value,
+        "receiver_zip_code":document.getElementById("receiver_zip_code").value,
+        "type":document.getElementById("type").value,
+        "instruction":document.getElementById("instruction").value,
+        "note":document.getElementById("note").value,
+        "rates":document.getElementById("rates").value,
+        "COD":document.getElementById("COD").value,
+        "mass":document.getElementById("mass").value,
+        "sending_time":document.getElementById("sending_time").value,
+        "completion_time":document.getElementById("completion_time").value,
+        "management":document.getElementById("management").value
+    };
 
-            var formData = new FormData(this);
-
-
-            // Create a new XMLHttpRequest object
-            var xhr = new XMLHttpRequest();
-
-            // Configure it: POST-request for the URL /your-api-file.php
-            
-
-            // This will be called after the response is received
-            xhr.onload = function () {
-                if (xhr.status == 200) {
-                    // Handle success response from the API
-                    console.log("Success:", JSON.parse(xhr.responseText));
-                } else {
-                    // Handle error response from the API
-                    console.log("Error:", xhr.responseText);
-                }
-            };
-            xhr.open("POST", "backend/api/oder/new_oder.php", true);
-            
-            // Set the content type to JSON
-            xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
-
-            // Convert the data to JSON and send the request
-            xhr.send(JSON.stringify(formData));
-            console.log(JSON.stringify(formData));
-        });
+    fetch("backend/api/oder/new_oder.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+    })
+    .then(response => {
+        if (response.ok) {
+            // Xử lý khi yêu cầu thành công
+            alert("Yêu cầu thành công");
+            location.reload();
+        } else {
+            alert("Yêu cầu không thành công");
+        }
+    })
+    .catch(error => {
+        // Xử lý khi có lỗi
+        console.log("Fetch error:", error);
+        alert("Yêu cầu không thành công");
     });
-
+});

@@ -67,7 +67,7 @@
 					</div>
 					
 					<div class="submit-section">
-						<button type="submit" name="add_employee" class="btn btn-primary submit-btn">Submitbackend/api/account/new_account.php</button>
+						<button type="submit" name="add_employee" class="btn btn-primary submit-btn">Submit</button>
 					</div>
 				</form>
 			</div>
