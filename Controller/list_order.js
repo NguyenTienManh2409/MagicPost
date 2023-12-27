@@ -6,15 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
             if (xhr.status === 200) {
                 var response = JSON.parse(xhr.responseText);
                 updateTable(response);
-                console.log("12312413");
-
+                console.log("success");
             } else {
                 console.error('Error:', xhr.statusText);
             }
         }
     };
 
-    xhr.open('GET', 'backend/api/oder/list_oder.php', true);
+    xhr.open('GET', '/MagicPost/backend/api/oder/list_oder.php', true);
     xhr.send();
 });
 

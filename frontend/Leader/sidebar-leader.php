@@ -6,17 +6,14 @@
 								<span>Main</span>
 							</li>
 							<li class="submenu">
-								<a href="#"><i class="la la-dashboard"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="index.php">Admin Dashboard</a></li>
-									<li><a href="employee-dashboard.php">Employee Dashboard</a></li>
-								</ul>
+								<a href="#"><i class="la la-dashboard"></i> <span> Dashboard</span></a>
+								<li><a href="index.php"><i class="la la-rocket"></i><span>Admin Dashboard</span></a></li>
 							</li>
 
 							<li class="menu-title"> 
 								<span>Quản lý hàng hóa</span>
 							</li>
-							<li><a href="orders.php"><i class="la la-users"></i> <span>Thống kê hàng hóa</span></a></li>
+							<li><a href="\MagicPost\frontend\Leader\orders.php"><i class="la la-users"></i> <span>Thống kê hàng hóa</span></a></li>
 
 							
 							<li class="menu-title"> 

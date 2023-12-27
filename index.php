@@ -31,12 +31,6 @@
 		
 		<!-- Main CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
-		
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.min.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
     </head>
 	
     <body>
@@ -48,7 +42,7 @@
 			<!-- /Header -->
 			
 			<!-- Sidebar -->
-            <?php include_once("includes/sidebar-GatheringEmployee.php");?>
+            <?php include_once("frontend\Leader\sidebar-leader.php");?>
 			<!-- /Sidebar -->
 			
 			<!-- Page Wrapper -->
@@ -71,13 +65,6 @@
 					<!-- /Page Header -->
 				
 					<div class="row">
-						<?php 
-										$sql = "SELECT id from clients";
-										$query = $dbh->prepare($sql);
-										$query->execute();
-										$results = $query->fetchAll(PDO::FETCH_OBJ);
-										$totalcount = $query->rowCount();
-									?>
 						<div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
 							<div class="card dash-widget">
 								<div class="card-body">
