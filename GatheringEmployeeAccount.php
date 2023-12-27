@@ -48,7 +48,7 @@
 			<!-- /Header -->
 			
 			<!-- Sidebar -->
-            <?php include_once("includes/sidebar-Pointleader.php");?>
+            <?php include_once("includes/sidebar-GatheringPointLeader.php");?>
 			<!-- /Sidebar -->
 			
 			<!-- Page Wrapper -->
@@ -61,7 +61,7 @@
 					<div class="page-header">
 						<div class="row align-items-center">
 							<div class="col">
-								<h3 class="page-title">Giao dịch viên</h3>
+								<h3 class="page-title">Nhân viên điểm tập kết</h3>
 								<ul class="breadcrumb">
 								</ul>
 							</div>
@@ -123,8 +123,8 @@
 		<!-- /Main Wrapper -->
 		
 		<!-- api -->
-		<script src="Controller/list_account_tellers.js"></script>
-		<script src="Controller/add_account1.js"></script>
+		<script src="Controller/list_account_gathering.js"></script>
+        <script src="Controller/add_account1.js"></script>
 		<!-- jQuery -->
         <script src="assets/js/jquery-3.2.1.min.js"></script>
 		

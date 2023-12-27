@@ -48,7 +48,7 @@
 			<!-- /Header -->
 			
 			<!-- Sidebar -->
-            <?php include_once("includes/sidebar-teller.php");?>
+            <?php include_once("includes/sidebar-GatheringEmployee.php");?>
 			<!-- /Sidebar -->
 			
 			<!-- Page Wrapper -->

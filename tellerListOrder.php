@@ -13,7 +13,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
         <meta name="robots" content="noindex, nofollow">
-        <title>Teller</title>
+        <title>Order</title>
 		
 		<!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
@@ -48,7 +48,7 @@
 			<!-- /Header -->
 			
 			<!-- Sidebar -->
-            <?php include_once("includes/sidebar-Pointleader.php");?>
+            <?php include_once("includes/sidebar-teller.php");?>
 			<!-- /Sidebar -->
 			
 			<!-- Page Wrapper -->
@@ -61,36 +61,42 @@
 					<div class="page-header">
 						<div class="row align-items-center">
 							<div class="col">
-								<h3 class="page-title">Giao dịch viên</h3>
+								<h3 class="page-title">Thống kê hàng hóa</h3>
 								<ul class="breadcrumb">
 								</ul>
 							</div>
 							<div class="col-auto float-right ml-auto">
 							</div>
-							<div class="col-auto float-right ml-auto">
-								<a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_employee"><i class="fa fa-plus"></i> Add Employee</a>
-							</div>
 						</div>
 					</div>
 					<!-- /Page Header -->
+					<!-- Search Filter -->
+					<div class="row filter-row">
+						<div class="col-sm-6 col-md-3">  
+							<div class="form-group form-focus">
+								<input type="text" class="form-control floating" id="EmployeeCode">
+								<label class="focus-label">Mã nhân viên</label>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3">  
+							<button class="btn btn-success btn-block" id="btnSearch">Tìm kiếm</button>
+						</div>
+    					</div>
+					<!-- Search Filter -->
 					
 					<div class="row">
 						<div class="col-md-12">
 							<div >
 								<!-- Promotion Table -->
-								<table class="table table-striped custom-table mb-0 datatable" id="accountTable">
+								<table class="table table-striped custom-table mb-0 datatable" id="OrderTable">
 									<thead>
 										<tr>
 										<th>ID</th>
-										<th>Type</th>
-										<th>Full Name</th>
-										<th>Phone Number</th>
-										<th>Address</th>
-										<th>Employee Code</th>
-										<th>User Name</th>
-										<th>Email</th>
-										<th>Password</th>
-										<th>Company Code</th>
+										<th>Mã đơn hàng</th>
+										<th>Tình trạng</th>
+										<th>Mã nhân viên</th>
+                                        <th>Thời gian nhận</th>
+                                        <th>Thời gian trả</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -103,18 +109,6 @@
 					</div>
                 </div>
 				<!-- /Page Content -->
-				
-				<!-- Add Employee Modal -->
-				<?php include_once("includes/modals/employee/add_employee.php"); ?>
-				<!-- /Add Employee Modal -->
-				
-				<!-- Edit Employee Modal -->
-				<?php include_once("includes/modals/employee/edit_employee.php"); ?>
-				<!-- /Edit Employee Modal -->
-				
-				<!-- Delete Employee Modal -->
-				<?php include_once("includes/modals/employee/delete_employee.php"); ?>
-				<!-- /Delete Employee Modal -->
 			
             </div>
 			<!-- /Page Wrapper -->
@@ -123,8 +117,7 @@
 		<!-- /Main Wrapper -->
 		
 		<!-- api -->
-		<script src="Controller/list_account_tellers.js"></script>
-		<script src="Controller/add_account1.js"></script>
+		<script src="Controller/list_order_employee.js"></script>
 		<!-- jQuery -->
         <script src="assets/js/jquery-3.2.1.min.js"></script>
 		
