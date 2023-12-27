@@ -17,18 +17,15 @@
 								<span>Quản lý đơn hàng</span>
 							</li>
                             <li><a href="client_order.php"><i class="la la-edit"></i> <span>Ghi nhận hàng cần gửi</span></a></li>
-							<li><a href="order_workplace.php"><i class="la la-edit"></i> <span>Tạo đơn chuyển hàng</span></a></li>
-                            <li><a href="order_workplace.php"><i class="la la-edit"></i> <span>Tạo đơn hàng</span></a></li>
+							<li><a href="orderToGatheringPoint.php"><i class="la la-edit"></i> <span>Tạo đơn chuyển hàng</span></a></li>
 
                             <li class="menu-title"> 
 								<span>Xác nhận đơn hàng</span>
 							</li>
-							<li><a href="tellersAccount.php"><i class="la la-rocket"></i> <span>Điểm tập kết</span></a></li>
-                            <li><a href="tellersAccount.php"><i class="la la-rocket"></i> <span>Người nhận</span></a></li>
-                            <li><a href="tellersAccount.php"><i class="la la-rocket"></i> <span>Bị trả lại</span></a></li>
+							<li><a href="confirmstatus.php"><i class="la la-rocket"></i> <span>Điểm tập kết</span></a></li>
 
 							<li class="menu-title"> 
-								<span>Quản lý hàng bị trả lại</span>
+								<span>Quản lý hàng hóa</span>
 							</li>
 							<li><a href="tellersAccount.php"><i class="la la-rocket"></i> <span>Đơn hàng bị trả lại</span></a></li>
 							
@@ -40,8 +37,7 @@
 							</li>
 							<li> 
 								<a href="logout.php"><i class="la la-power-off"></i> <span>Logout</span></a>
-							</li>
-									
+							</li>	
 						</ul>
 					</div>
                 </div>
