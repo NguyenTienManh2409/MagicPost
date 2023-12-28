@@ -19,7 +19,7 @@ function fetchDataFromApi(EmployeeCode) {
         }
     };
 
-    xhr.open('POST', 'backend/api/oder_status/list_oder_an_employee.php', true);
+    xhr.open('POST', '/MagicPost/backend/api/oder_status/list_oder_an_employee.php', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify({ employee_code: EmployeeCode }));
 }

@@ -9,7 +9,7 @@ document.getElementById("OderToGatheringPoint").addEventListener("submit", funct
         "response_time":document.getElementById("response_time").value
     };
 
-    fetch("backend/api/oder_status/new_status.php", {
+    fetch("/MagicPost/backend/api/oder_status/new_status.php", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

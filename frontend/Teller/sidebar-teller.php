@@ -13,27 +13,27 @@
                             <li class="menu-title"> 
 								<span>Quản lý đơn hàng</span>
 							</li>
-                            <li><a href="client_order.php"><i class="la la-edit"></i> <span>Ghi nhận hàng cần gửi</span></a></li>
-							<li><a href="orderToGatheringPoint.php"><i class="la la-edit"></i> <span>Tạo đơn chuyển hàng</span></a></li>
+                            <li><a href="\MagicPost\frontend\Teller\client_order.php"><i class="la la-edit"></i> <span>Ghi nhận hàng cần gửi</span></a></li>
+							<li><a href="\MagicPost\frontend\Teller\orderToGatheringPoint.php"><i class="la la-edit"></i> <span>Tạo đơn chuyển hàng</span></a></li>
 
                             <li class="menu-title"> 
 								<span>Xác nhận đơn hàng</span>
 							</li>
-							<li><a href="confirmstatus.php"><i class="la la-rocket"></i> <span>Cập nhật tình trạng</span></a></li>
+							<li><a href="\MagicPost\frontend\Teller\confirmstatus.php"><i class="la la-rocket"></i> <span>Cập nhật tình trạng</span></a></li>
 
 							<li class="menu-title"> 
 								<span>Quản lý hàng hóa</span>
 							</li>
-							<li><a href="tellerListOrder.php"><i class="la la-rocket"></i> <span>Thống kê hàng hóa</span></a></li>
+							<li><a href="\MagicPost\frontend\Teller\tellerListOrder.php"><i class="la la-rocket"></i> <span>Thống kê hàng hóa</span></a></li>
 							
 							<li class="menu-title"> 
 								<span>Pages</span>
 							</li>
 							<li> 
-								<a href="settings.php"><i class="la la-cogs"></i> <span>Settings</span></a>
+								<a href="\MagicPost\settings.php"><i class="la la-cogs"></i> <span>Settings</span></a>
 							</li>
 							<li> 
-								<a href="logout.php"><i class="la la-power-off"></i> <span>Logout</span></a>
+								<a href="\MagicPost\logout.php"><i class="la la-power-off"></i> <span>Logout</span></a>
 							</li>	
 						</ul>
 					</div>

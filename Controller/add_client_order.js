@@ -24,7 +24,7 @@ document.getElementById("clientOrderForm").addEventListener("submit", function(e
         "management":document.getElementById("management").value
     };
 
-    fetch("backend/api/oder/new_oder.php", {
+    fetch("/MagicPost/backend/api/oder/new_oder.php", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

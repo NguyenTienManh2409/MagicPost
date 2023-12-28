@@ -13,7 +13,7 @@
 							<li class="menu-title"> 
 								<span>Quản lý hàng hóa</span>
 							</li>
-							<li><a href="\MagicPost\frontend\Leader\orders.php"><i class="la la-users"></i> <span>Thống kê hàng hóa</span></a></li>
+							<li><a href="orders.php"><i class="la la-users"></i> <span>Thống kê hàng hóa</span></a></li>
 
 							
 							<li class="menu-title"> 
@@ -25,13 +25,6 @@
 								<span>Quản lý tài khoản</span>
 							</li>
 							<li><a href="PointLeaderAccount.php"><i class="la la-users"></i> <span>Tài khoản trưởng điểm</span></a></li>
-							
-							<li class="menu-title"> 
-								<span>Lãnh đạo</span>
-							</li>
-							<li> 
-								<a href="users.php"><i class="la la-user-plus"></i> <span>Tài khoản</span></a>
-							</li>
 							
 							<li class="menu-title"> 
 								<span>Pages</span>

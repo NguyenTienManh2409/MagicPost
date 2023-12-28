@@ -13,7 +13,7 @@ document.getElementById("addEmployee").addEventListener("submit", function(event
         "company_code":document.getElementById("company_code").value
     };
 
-    fetch("backend/api/account/new_account.php", {
+    fetch("/MagicPost/backend/api/account/new_account.php", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

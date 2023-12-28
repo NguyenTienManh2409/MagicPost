@@ -19,7 +19,7 @@ function fetchDataFromApi(companyCode) {
         }
     };
 
-    xhr.open('POST', 'backend/api/oder_status/list_oder_in_workplace.php', true);
+    xhr.open('POST', '/MagicPost/backend/api/oder_status/list_oder_in_workplace.php', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify({ company_code: companyCode }));
 }

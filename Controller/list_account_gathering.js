@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    xhr.open('GET', 'backend/api/account/list_account_gathering.php', true);
+    xhr.open('GET', '/MagicPost/backend/api/account/list_account_gathering.php', true);
     xhr.send();
 });
 

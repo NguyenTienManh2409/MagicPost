@@ -1,9 +1,9 @@
 <?php 
 	session_start();
 	error_reporting(0);
-	include('/MagicPost/includes/config.php');
+	include('includes/config.php');
 	if(strlen($_SESSION['userlogin'])==0){
-		header('location:/MagicPost/login.php');
+		header('location:login.php');
 	}
  
  ?>
@@ -14,10 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
         <meta name="robots" content="noindex, nofollow">
         <title>Order</title>
-		
-		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
-		
+
 		<!-- Bootstrap CSS -->
         <link rel="stylesheet" href="/MagicPost/assets/css/bootstrap.min.css">
 		
@@ -48,7 +45,7 @@
 			<!-- /Header -->
 			
 			<!-- Sidebar -->
-            <?php include("sidebar-leader.php");?>
+            <?php include_once("sidebar-teller.php");?>
 			<!-- /Sidebar -->
 			
 			<!-- Page Wrapper -->
@@ -70,35 +67,33 @@
 						</div>
 					</div>
 					<!-- /Page Header -->
+					<!-- Search Filter -->
+					<div class="row filter-row">
+						<div class="col-sm-6 col-md-3">  
+							<div class="form-group form-focus">
+								<input type="text" class="form-control floating" id="EmployeeCode">
+								<label class="focus-label">Mã nhân viên</label>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-3">  
+							<button class="btn btn-success btn-block" id="btnSearch">Tìm kiếm</button>
+						</div>
+    					</div>
+					<!-- Search Filter -->
 					
 					<div class="row">
 						<div class="col-md-12">
 							<div >
 								<!-- Promotion Table -->
-								<table class="table table-striped custom-table mb-0 datatable" id="accountTable">
+								<table class="table table-striped custom-table mb-0 datatable" id="OrderTable">
 									<thead>
 										<tr>
 										<th>ID</th>
-										<th>Tên mặt hàng</th>
 										<th>Mã đơn hàng</th>
-										<th>Người gửi</th>
-										<th>Mã khách hàng</th>
-										<th>Sdt người gửi</th>
-										<th>Địa chỉ gửi</th>
-										<th>Mã bưu chính gửi</th>
-										<th>Người nhận</th>
-										<th>Sdt người nhận</th>
-										<th>Địa chỉ nhận</th>
-										<th>Mã bưu chính nhận</th>
-										<th>Loại hàng</th>
-										<th>Chỉ dẫn</th>
-                                        <th>Ghi chú</th>
-                                        <th>Cước phí</th>
-                                        <th>COD</th>
-                                        <th>Khối lượng</th>
-                                        <th>Thời gian gửi</th>
-                                        <th>Thời gian hoàn thành</th>
-                                        <th>Quản lý công ty</th>
+										<th>Tình trạng</th>
+										<th>Mã nhân viên</th>
+                                        <th>Thời gian nhận</th>
+                                        <th>Thời gian trả</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -119,7 +114,7 @@
 		<!-- /Main Wrapper -->
 		
 		<!-- api -->
-		<script src="/MagicPost/Controller/list_order.js"></script>
+		<script src="/MagicPost/Controller/list_order_employee.js"></script>
 		<!-- jQuery -->
         <script src="/MagicPost/assets/js/jquery-3.2.1.min.js"></script>
 		

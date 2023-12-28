@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("addEmployee").addEventListener("submit", function(event) {
         event.preventDefault(); 
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "backend/api/account/new_account.php", true);
+        xhr.open("POST", "/MagicPost/backend/api/account/new_account.php", true);
 
 
         // Tạo đối tượng chứa dữ liệu từ form

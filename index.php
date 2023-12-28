@@ -42,7 +42,7 @@
 			<!-- /Header -->
 			
 			<!-- Sidebar -->
-            <?php include_once("frontend\Leader\sidebar-leader.php");?>
+            <?php include_once("frontend\GatheringPointLeader\sidebar-GatheringPointLeader.php");?>
 			<!-- /Sidebar -->
 			
 			<!-- Page Wrapper -->

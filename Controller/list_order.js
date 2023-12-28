@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    xhr.open('GET', '/MagicPost/backend/api/oder/list_oder.php', true);
+    xhr.open('GET','/MagicPost/backend/api/oder/list_oder.php', true);
     xhr.send();
 });
 
