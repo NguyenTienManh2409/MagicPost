@@ -1,19 +1,10 @@
 ﻿<?php 
 	session_start();
 	error_reporting(0);
-	include_once('includes/config.php');
+	include_once('/MagicPost/backend/config/db.php');
 	include_once 'includes/functions.php';
 	if(strlen($_SESSION['userlogin'])==0){
 		header('location:login.php');
-	}elseif (isset($_POST['change_pass'])) {
-		$currentpassword=htmlspecialchars($_POST['password']);
-		$npass=htmlspecialchars($_POST['newpassword']);
-
-	$username=$_SESSION['userlogin'];
- $sql ="SELECT Password FROM users WHERE UserName=:uname";
-	$query= $dbh -> prepare($sql);
-	$query-> bindParam(':uname', $username, PDO::PARAM_STR);
-	$query-> execute();
 	}
  ?>
 <!DOCTYPE html>
@@ -72,7 +63,6 @@
 								</div>
 							</div>
 							<!-- /Page Header -->
-							<?php if($npass == $currentpassword){echo "they matched";}else{echo "they did not matched";} ?>
 							<form method="POST" enctype="multipart/form-data"> 
 								<div class="form-group">
 									<label>Current password</label>

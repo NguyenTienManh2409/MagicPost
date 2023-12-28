@@ -39,11 +39,11 @@
         <div class="main-wrapper">
 		
 			<!-- Header -->
-            <?php include_once("includes/header.php"); ?>
+            <?php include_once("frontend/Teller/header.php"); ?>
 			<!-- /Header -->
 			
 			<!-- Sidebar -->
-            <?php include_once("frontend\GatheringPointEmployee\sidebar-GatheringEmployee.php");?>
+            <?php include_once("frontend/Teller/sidebar-teller.php");?>
 			<!-- /Sidebar -->
 			
 			<!-- Page Wrapper -->

@@ -1,8 +1,10 @@
 <?php 
 	session_start();
 	error_reporting(0);
-	include_once('includes/config.php');
-	include_once('includes/functions.php');
+	include_once('/MagicPost/backend/config/db.php');
+	if(strlen($_SESSION['userlogin'])==0){
+		header('location:login.php');
+	}
  ?>
 
 <!DOCTYPE html>

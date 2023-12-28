@@ -36,19 +36,27 @@
     while($rowb = $countb->fetch(PDO::FETCH_ASSOC)) {
         extract($rowb);
         if($Mat_khau === $data->password && $Vai_tro === 'Quản lý điểm tập kết') {
-            echo json_encode(array("message","đăng nhập quản lý tập kết thành công"));
+            session_start();
+            $_SESSION['userlogin']=$data->user_name;   
+            echo json_encode("đăng nhập quản lý tập kết thành công");
             return true;
         } 
         else if($Mat_khau === $data->password && $Vai_tro === 'Quản lý điểm giao dịch') {
-            echo json_encode(array("message","đăng nhập quản lý giao dịch thành công"));
+            session_start();
+            $_SESSION['userlogin']=$data->user_name;            
+            echo json_encode("đăng nhập quản lý giao dịch thành công");
             return true;
         }
         else if($Mat_khau === $data->password && $Vai_tro === 'Nhân viên điểm giao dịch') {
-            echo json_encode(array("message","đăng nhập nhân viên giao dịch thành công"));
+            session_start();
+            $_SESSION['userlogin']=$data->user_name;   
+            echo json_encode("đăng nhập nhân viên giao dịch thành công");
             return true;
         } 
         else if($Mat_khau === $data->password && $Vai_tro === 'Nhân viên điểm tập kết') {
-            echo json_encode(array("message","đăng nhập nhân viên tập kết thành công"));
+            session_start();
+            $_SESSION['userlogin']=$data->user_name;   
+            echo json_encode("đăng nhập nhân viên tập kết thành công");
             return true;
         } 
     }

@@ -1,7 +1,7 @@
 <div class="header">
 	<!-- Logo -->
 	<div class="header-left">
-		<a href="/MagicPost/index-leader.php" class="logo">
+		<a href="/MagicPost/index-GatheringEmployee.php" class="logo">
 			<img src="/MagicPost/assets/img/logo.png" width="40" height="40" alt="">
 		</a>
 	</div>

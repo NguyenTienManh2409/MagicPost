@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	session_start();
 	error_reporting(0);
 	include('includes/config.php');
@@ -39,7 +39,7 @@
         <div class="main-wrapper">
 		
 			<!-- Header -->
-            <?php include_once("includes/header.php"); ?>
+            <?php include_once("frontend\GatheringPointEmployee\header.php"); ?>
 			<!-- /Header -->
 			
 			<!-- Sidebar -->

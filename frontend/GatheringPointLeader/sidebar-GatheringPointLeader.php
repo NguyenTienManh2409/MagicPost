@@ -7,7 +7,6 @@
 							</li>
 							<li class="submenu">
 								<a href="#"><i class="la la-dashboard"></i> <span> Dashboard</span></a>
-								<li><a href="\MaicPost\index.php"><i class="la la-rocket"></i><span>Admin Dashboard</span></a></li>
 							</li>
 							
                             <li class="menu-title"> 

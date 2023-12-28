@@ -1,46 +1,11 @@
 <?php
 	session_start();
 	error_reporting(0);
-	include_once("includes/config.php");
+	include_once('/MagicPost/backend/config/db.php');
 	if($_SESSION['userlogin']>0){
 		header('location:index.php');
 	}elseif(isset($_POST['login'])){
-		$_SESSION['userlogin'] = $_POST['username'];
-		$username = htmlspecialchars($_POST['username']);
-		$password = htmlspecialchars($_POST['password']);
-		$sql = "SELECT UserName,Password from users where UserName=:username";
-		$query = $dbh->prepare($sql);
-		$query->bindParam(':username',$username,PDO::PARAM_STR);
-		$query-> execute();
-		$results=$query->fetchAll(PDO::FETCH_OBJ);
-		if($query->rowCount() > 0){
-			foreach ($results as $row) {
-				$hashpass=$row->Password;
-			}//verifying Password
-			if (password_verify($password, $hashpass)) {
-				$_SESSION['userlogin']=$_POST['username'];
-				echo "<script>window.location.href= 'index.php'; </script>";
-			}
-			else {
-				$wrongpassword='
-				<div class="alert alert-danger alert-dismissible fade show" role="alert">
-				<strong>Oh Snapp!😕</strong> Alert <b class="alert-link">Password: </b>You entered wrong password.
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-				</div>';
-			}
-		}
-		//if username or email not found in database
-		else{
-			$wrongusername='
-			<div class="alert alert-danger alert-dismissible fade show" role="alert">
-				<strong>Oh Snapp!</strong> Alert <b class="alert-link">UserName: </b> You entered a wrong UserName.
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>';
-		}
+		
 	}
 ?>
 <!DOCTYPE html>
@@ -83,23 +48,21 @@
 					
 					<div class="account-box">
 						<div class="account-wrapper">
-							<h3 class="account-title">Admin Login</h3>
+							<h3 class="account-title">Login</h3>
 							<!-- Account Form -->
-							<form method="POST" enctype="multipart/form-data">
+							<form method="POST" id="loginForm" enctype="multipart/form-data">
 								<div class="form-group">
 									<label>User Name</label>
-									<input class="form-control" name="username" required type="text">
+									<input class="form-control" name="user_name" id="user_name"required type="text">
 								</div>
-								<?php if($wrongusername){echo $wrongusername;}?>
 								<div class="form-group">
 									<div class="row">
 										<div class="col">
 											<label>Password</label>
 										</div>
 									</div>
-									<input class="form-control" name="password" required type="password">
+									<input class="form-control" name="password" id="password" required type="password">
 								</div>
-								<?php if($wrongpassword){echo $wrongpassword;}?>
 								
 								<div class="form-group text-center">
 									<button class="btn btn-primary account-btn" name="login" type="submit">Login</button>
@@ -113,6 +76,12 @@
 								<div class="account-footer">
 									<p>Having Trouble? report an issue on github</p>
 								</div>
+								<div class="col-auto pt-2">
+											<a class="text-muted float-right" href="forgot-password.php">
+												GuestLogin
+											</a>
+								</div>
+								
 							</form>
 							<!-- /Account Form -->
 							
@@ -122,7 +91,8 @@
 			</div>
 		</div>
 		<!-- /Main Wrapper -->
-		
+		<script src="Controller/login.js"></script>
+
 		<!-- jQuery -->
 		<script src="assets/js/jquery-3.2.1.min.js"></script>
 		

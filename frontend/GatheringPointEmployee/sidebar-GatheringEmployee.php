@@ -12,19 +12,13 @@
                             <li class="menu-title"> 
 								<span>Quản lý đơn hàng</span>
 							</li>
-                            <li><a href="\MagicPost\frontend\Teller\client_order.php"><i class="la la-edit"></i> <span>Ghi nhận hàng cần gửi</span></a></li>
-							<li><a href="\MagicPost\frontend\Teller\orderToGatheringPoint.php"><i class="la la-edit"></i> <span>Tạo đơn chuyển hàng</span></a></li>
+                            <li><a href="\MagicPost\frontend\GatheringPointEmployee\new_order.php"><i class="la la-edit"></i> <span>Tạo đơn hàng</span></a></li>
 
                             <li class="menu-title"> 
 								<span>Xác nhận đơn hàng</span>
 							</li>
-							<li><a href="\MagicPost\frontend\Teller\confirmstatus.php"><i class="la la-rocket"></i> <span>Cập nhật tình trạng</span></a></li>
+							<li><a href="\MagicPost\frontend\GatheringPointEmployee\confirmstatus.php"><i class="la la-rocket"></i> <span>Cập nhật tình trạng</span></a></li>
 
-							<li class="menu-title"> 
-								<span>Quản lý hàng hóa</span>
-							</li>
-							<li><a href="\MagicPost\frontend\Teller\tellerListOrder.php"><i class="la la-rocket"></i> <span>Thống kê hàng hóa</span></a></li>
-							
 							<li class="menu-title"> 
 								<span>Pages</span>
 							</li>

@@ -1,7 +1,7 @@
 ﻿<?php 
 	session_start();
 	error_reporting(0);
-	include_once('includes/config.php');
+	include_once('/MagicPost/backend/config/db.php');
 	include_once ('includes/functions.php');
 	if(strlen($_SESSION['userlogin'])==0){
 		header('location:login.php');
@@ -74,13 +74,13 @@
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Company Name <span class="text-danger">*</span></label>
-											<input class="form-control" type="text" value="Dreamguy's Technologies">
+											<input class="form-control" type="text" value="MagicPost">
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
 											<label>Contact Person</label>
-											<input class="form-control " value="Daniel Porter" type="text">
+											<input class="form-control " value="....." type="text">
 										</div>
 									</div>
 								</div>

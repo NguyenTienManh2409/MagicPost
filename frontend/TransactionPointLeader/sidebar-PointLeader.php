@@ -6,7 +6,7 @@
 								<span>Main</span>
 							</li>
 							<li class="submenu">
-								<li><a href="\MagicPost\index.php"><i class="la la-rocket"></i><span>Admin Dashboard</span></a></li>
+								<a href="#"><i class="la la-dashboard"></i> <span> Dashboard</span></a>
 							</li>
 							
                             <li class="menu-title"> 

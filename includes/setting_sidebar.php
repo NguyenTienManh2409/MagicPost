@@ -3,7 +3,7 @@
 					<div class="sidebar-menu">
 						<ul>
 							<li> 
-								<a href="index.php"><i class="la la-home"></i> <span>Back to Home</span></a>
+								<a href="#"><i class="la la-home"></i> <span>Back to Home</span></a>
 							</li>
 							<li class="menu-title">Settings</li>
 							<li> 
