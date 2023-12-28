@@ -44,17 +44,6 @@
             $stmt->execute();
             return $stmt;
         }
-
-        public function read_info_role($roles) {
-            $roles = implode("', '", $roles);
-            $query = "SELECT * FROM account
-            WHERE account.Vai_tro IN ('$roles')
-            ORDER BY Id DESC";
-
-            $stmt = $this->conn->prepare($query);
-            $stmt->execute();
-            return $stmt;
-        }
         
         //show list account where workplace
         public function list_staff() {
@@ -90,6 +79,18 @@
             $this->Email = $row['Email'];
             $this->Mat_khau = $row['Mat_khau'];
             $this->Ma_don_vi = $row['Ma_don_vi'];
+        }
+
+        //login
+        public function login_staff() {
+            $query = "SELECT Ten_tai_khoan,Mat_khau,Vai_tro from account where Ten_tai_khoan=:Ten_tai_khoan";
+            $stmt = $this->conn->prepare($query);
+            //clean data
+            $this->Ten_tai_khoan = htmlspecialchars(strip_tags($this->Ten_tai_khoan));
+            //bind data
+            $stmt->bindParam(':Ten_tai_khoan',$this->Ten_tai_khoan);
+            $stmt->execute();
+            return $stmt;
         }
 
         public function new_account() {

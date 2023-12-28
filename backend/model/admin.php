@@ -43,6 +43,18 @@
 
         }
 
+            //login admin
+        public function login_admin() {
+            $query = "SELECT Ten_tai_khoan,Mat_khau from admin_account where Ten_tai_khoan=:Ten_tai_khoan";
+            $stmt = $this->conn->prepare($query);
+            //clean data
+            $this->Ten_tai_khoan = htmlspecialchars(strip_tags($this->Ten_tai_khoan));
+            //bind data
+            $stmt->bindParam(':Ten_tai_khoan',$this->Ten_tai_khoan);
+            $stmt->execute();
+            return $stmt;
+        }
+
         public function new_account_admin() {
             $query = "INSERT INTO admin_account SET Ho_ten=:Ho_ten ,Ten_tai_khoan=:Ten_tai_khoan ,So_dien_thoai=:So_dien_thoai ,Email=:Email ,
             Mat_khau=:Mat_khau";
