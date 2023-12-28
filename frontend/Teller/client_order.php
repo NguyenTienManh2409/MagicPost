@@ -213,6 +213,7 @@
 		
 		<!-- api -->
 		<script src="/MagicPost/Controller/add_client_order.js"></script>
+		<script src="/MagicPost/Controller/print_order.js"></script>
 		<!-- jQuery -->
         <script src="/MagicPost/assets/js/jquery-3.2.1.min.js"></script>
 		

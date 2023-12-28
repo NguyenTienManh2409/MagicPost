@@ -32,6 +32,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         else if (data == "đăng nhập tài khoản chủ tịch thành công") {
             window.location.href = "index-leader.php";
         }
+        alert("dang nhap thanh cong");
     })
     .catch(error => {
         // Xử lý khi có lỗi

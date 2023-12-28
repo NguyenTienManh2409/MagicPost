@@ -77,7 +77,7 @@
 									<p>Having Trouble? report an issue on github</p>
 								</div>
 								<div class="col-auto pt-2">
-											<a class="text-muted float-right" href="forgot-password.php">
+											<a class="text-muted float-right" href="client_status.php">
 												GuestLogin
 											</a>
 								</div>

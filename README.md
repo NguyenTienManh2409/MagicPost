@@ -13,3 +13,4 @@
 `password` : `barry`
 
 
+Đây là dự án bài tập lớn môn lập trình Web. Đặc tả dự án được mô tả tại: MagicPost

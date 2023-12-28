@@ -29,6 +29,17 @@
             return $stmt;
         }
 
+        public function read_info_role($roles) {
+            $roles = implode("', '", $roles);
+            $query = "SELECT * FROM account
+            WHERE account.Vai_tro IN ('$roles')
+            ORDER BY Id DESC";
+
+            $stmt = $this->conn->prepare($query);
+            $stmt->execute();
+            return $stmt;
+        }
+
         //show list account where
         public function list_manager() {
             $query = "SELECT * FROM account WHERE Vai_tro=:Vai_tro OR Vai_tro=:Vai_tro_1";

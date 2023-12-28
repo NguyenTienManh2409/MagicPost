@@ -12,18 +12,17 @@
 							<li class="menu-title"> 
 								<span>Quản lý hàng hóa</span>
 							</li>
-							<li><a href="orders.php"><i class="la la-users"></i> <span>Thống kê hàng hóa</span></a></li>
+							<li><a href="\MagicPost\frontend\Leader\orders.php"><i class="la la-users"></i> <span>Thống kê hàng hóa</span></a></li>
 
 							
 							<li class="menu-title"> 
 								<span>Quản lý hệ thống</span>
 							</li>
-							<li><a href="transactionPoint.php"><i class="la la-users"></i> <span>Điểm giao dịch</span></a></li>
-							<li><a href="gatheringPoint.php"><i class="la la-users"></i> <span>Điểm tập kết</span></a></li>
+							<li><a href="\MagicPost\frontend\Leader\workplace.php"><i class="la la-users"></i> <span>Nơi làm việc</span></a></li>
 							<li class="menu-title"> 
 								<span>Quản lý tài khoản</span>
 							</li>
-							<li><a href="PointLeaderAccount.php"><i class="la la-users"></i> <span>Tài khoản trưởng điểm</span></a></li>
+							<li><a href="\MagicPost\frontend\Leader\PointLeaderAccount.php"><i class="la la-users"></i> <span>Tài khoản trưởng điểm</span></a></li>
 							
 							<li class="menu-title"> 
 								<span>Pages</span>

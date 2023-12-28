@@ -29,7 +29,9 @@
     while($rowa = $counta->fetch(PDO::FETCH_ASSOC)) {
         extract($rowa);
         if($Mat_khau === $data->password) {
-            echo json_encode(array("message","đăng nhập tài khoản chủ tịch thành công"));
+            session_start();
+            $_SESSION['userlogin']=$data->user_name;  
+            echo json_encode("đăng nhập tài khoản chủ tịch thành công");
             return true;
         }
     }
