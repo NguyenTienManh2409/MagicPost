@@ -11,8 +11,8 @@
 
         $oder = new Oder($connect);
 
-        $oder->Id = isset($_GET['id']) ? $_GET['id'] : die();
-
+        $data = json_decode(file_get_contents("php://input"));
+        $oder->Id = $data->id;
         $oder->show_is();
 
         $oder_item = array(
