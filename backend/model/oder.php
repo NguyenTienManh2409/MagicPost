@@ -41,11 +41,14 @@
 
         //show data
         public function show_is() {
-            $query = "SELECT * FROM oder WHERE Id=? LIMIT 1";
+            $query = "SELECT * FROM oder WHERE Id=:Id LIMIT 1";
 
             $stmt = $this->conn->prepare($query);
 
-            $stmt->bindParam(1, $this->Id);
+            //clean data
+            $this->Id = htmlspecialchars(strip_tags($this->Id));
+            //bind data
+            $stmt->bindParam(':Id',$this->Id);
             $stmt->execute();
             
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
