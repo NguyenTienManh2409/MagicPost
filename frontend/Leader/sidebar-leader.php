@@ -28,10 +28,10 @@
 								<span>Pages</span>
 							</li>
 							<li> 
-								<a href="settings.php"><i class="la la-cogs"></i> <span>Settings</span></a>
+								<a href="settings.php"><i class="la la-cogs"></i> <span>/MagicPost/Settings</span></a>
 							</li>
 							<li> 
-								<a href="logout.php"><i class="la la-power-off"></i> <span>Logout</span></a>
+								<a href="logout.php"><i class="la la-power-off"></i> <span>/MagicPost/Logout</span></a>
 							</li>
 									
 						</ul>

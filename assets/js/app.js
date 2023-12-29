@@ -133,6 +133,7 @@ $(document).ready(function() {
 		});
 	}
 	
+	
 	// Tooltip
 
 	if($('[data-toggle="tooltip"]').length > 0) {
