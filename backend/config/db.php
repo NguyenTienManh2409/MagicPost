@@ -4,7 +4,7 @@ class Db_api{
     private $servername = "localhost";
     private $username = "root";
     private $password = "";
-    private $db = "magicpost2";
+    private $db = "magicpost";
     private $conn;
 
     public function connect() {
