@@ -32,11 +32,11 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         else if (data == "đăng nhập tài khoản chủ tịch thành công") {
             window.location.href = "index-leader.php";
         }
-        alert("dang nhap thanh cong");
+        alert("Đăng nhập thành công");
     })
     .catch(error => {
         // Xử lý khi có lỗi
         console.log("Fetch error:", error);
-        alert("Yêu cầu không thành công");
+        alert("Đăng nhập không thành công");
     });
 });
