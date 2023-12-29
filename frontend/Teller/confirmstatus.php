@@ -59,7 +59,7 @@
 					<div class="page-header">
 						<div class="row align-items-center">
 							<div class="col">
-								<h3 class="page-title" style="font-family: 'Times New Roman', sans-serif;">Ghi nhận đơn hàng đến điểm tập kết</h3>
+								<h3 class="page-title" style="font-family: 'Times New Roman', sans-serif;">Xác nhân đơn hàng</h3>
 							</div>
 						</div>
 					</div>
@@ -68,7 +68,7 @@
 					<div class="modal-dialog modal-dialog-centered modal-lg" style="margin-top: -100px;">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h4 class="modal-title">Tạo đơn hàng đến điểm tập kết</h4>
+								<h4 class="modal-title">Xác nhân đơn hàng</h4>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>

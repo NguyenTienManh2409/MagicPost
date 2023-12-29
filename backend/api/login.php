@@ -48,7 +48,7 @@
             echo json_encode("đăng nhập quản lý giao dịch thành công");
             return true;
         }
-        else if($Mat_khau === $data->password && $Vai_tro === 'Nhân viên điểm giao dịch') {
+        else if($Mat_khau === $data->password && $Vai_tro === 'Giao dịch viên') {
             session_start();
             $_SESSION['userlogin']=$data->user_name;   
             echo json_encode("đăng nhập nhân viên giao dịch thành công");
